@@ -1,4 +1,4 @@
-// menyimpan data tipe bus
+// menyimpan data tipe mobil
 $('#inputForm').on('submit', function(){
 
 	$.ajax({
@@ -19,7 +19,7 @@ $('#inputForm').on('submit', function(){
 
 });
 
-// menyimpan data tipe bus
+// menyimpan data tipe mobil
 $('#editForm').on('submit', function(){
 
 	$.ajax({
@@ -39,4 +39,3 @@ $('#editForm').on('submit', function(){
 	return false;
 
 });
-

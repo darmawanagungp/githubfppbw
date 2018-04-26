@@ -50,7 +50,7 @@ $(document).on('click', '.cnw', function(){
 // menghapus data invoice
 $(document).on('click', '#delete', function(){
 
-	var id = $(this).attr('idbus');
+	var id = $(this).attr('idmobil');
 	var c  = confirm('Apa anda yakin ingin menghapus tagihan ini ?')
 
 	if(c == true)

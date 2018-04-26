@@ -4,13 +4,13 @@ $( document ).ready(function() {
     var file1 = document.querySelector('.file');
     function readFile(input) {
         if (input.files && input.files[0]) {
-            var reader = new FileReader();          
+            var reader = new FileReader();
             reader.onload = function (e) {
                 $uploadCrop.croppie('bind', {
                     url: e.target.result
                 });
                 $('.file').addClass('ready');
-            }           
+            }
             reader.readAsDataURL(input.files[0]);
         }
     }
@@ -40,19 +40,19 @@ $( document ).ready(function() {
             type: 'canvas',
             size: 'viewport'
         }).then(function (resp) {
-        
+
         var desc    = $('#texte').summernote('code');
         var fd      = new FormData();
         var checked = [];
         $("input[name='facility[]']:checked").each(function ()
         {
             checked.push(parseInt($(this).val()));
-        }); 
+        });
         var tchecked = [];
         $("input[name='troom[]']:checked").each(function ()
         {
             tchecked.push(parseInt($(this).val()));
-        });  
+        });
 
         fd.append('facility[]', checked);
         fd.append('troom[]', tchecked);
@@ -81,7 +81,7 @@ $( document ).ready(function() {
             type: 'canvas',
             size: 'viewport'
         }).then(function (resp) {
-        
+
         var desc    = $('#texte').summernote('code');
         var fd      = new FormData();
 
@@ -89,10 +89,10 @@ $( document ).ready(function() {
         fd.append('desc', desc);
         fd.append('title', $('input#hotel').val());
         fd.append('price', $('input#price').val());
-        fd.append('idbus', $('input#idbus').val());
+        fd.append('idmobil', $('input#idmobil').val());
 
         $.ajax({
-            url: bu+'admin/bus/bus_save_edit',
+            url: bu+'admin/mobil/mobil_save_edit',
             type: "POST",
             data: fd,
             contentType: false,
@@ -107,4 +107,3 @@ $( document ).ready(function() {
     });
 
 });
-

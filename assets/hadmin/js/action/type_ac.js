@@ -5,14 +5,14 @@ $('.cnw').on('click', function(){
 
 });
 
-// menghapus data tipe bus
+// menghapus data tipe mobil
 
-// menghapus data tipe bus
+// menghapus data tipe mobil
 $(document).on('click', '.del', function(){
 
 	// variable
 	var id		= $(this).attr('idcontent');
-	var conf	= confirm('Apa anda yakin ingin menghapus tipe bus ini?');
+	var conf	= confirm('Apa anda yakin ingin menghapus tipe mobil ini?');
 
 	if(conf == true)
 	{

@@ -49,6 +49,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'Cpublic';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+/*
+ *  Routing alamat website / url
+ */
+
+///////////////////////////////////
+// ADMIN ROUTE
+///////////////////////////////////
+
+$route['admin']				= 'cadmin';
+$route['admin/beranda']		= 'admin/dashboard';
+$route['admin/halaman']		= 'admin/page';
+$route['admin/mobil']			= 'admin/mobil';
+$route['admin/seat']		= 'admin/seat';
+$route['admin/tipe']		= 'admin/type';
+$route['admin/tagihan'] 	= 'admin/invoice';
+$route['admin/setting'] 	= 'admin/setting';
+
+///////////////////////////////////
+// LOGIN ROUTE
+///////////////////////////////////
+
+$route['login']			= 'clogin/p_login';
+$route['login/process'] = 'clogin/login_process';
+$route['logout']		= 'clogin/logout';
+
+///////////////////////////////////
+// PUBLIC ROUTE
+///////////////////////////////////
+
+$route['kendaraan']					= 'public/vehicle';
+$route['kendaraan/(:any)']  		= 'public/vehicle/single_page/$1';
+$route['ordercheck']			 	= 'cpublic/p_order_check';
+$route['invoice/(:any)']		 	= 'public/invoice/index/$1';
+$route['ordercheck/process'] 	 	= 'cpublic/proccess_order_check';
+$route['page/(:any)'] 				= 'public/page/index/$1';
