@@ -69,6 +69,8 @@ class Vehicle extends MY_Controller {
 		// setting
 		$var['bank_data']  		= $this->msetting->load_data_bank();
 
+		$var['i'] = $this->input->post('i');
+		$var['j'] = $this->input->post('j');
 		// template
 		$this->public_template($var);
 		$this->load->view('public/part/mobil/index', $var);

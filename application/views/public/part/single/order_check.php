@@ -1,6 +1,7 @@
-<div class="order-check-wrapper">
+<div class="order-check-wrapper" style="height: 67%;">
+<div class="container">
 
-	<div class="left">
+	<div class="left container">
 
 		<form method="POST" action="<?php echo base_url();?>ordercheck/process">
 		<h2>Cek Pemesanan</h2>
@@ -46,4 +47,5 @@
 
 	</div>
 
+	</div>
 </div>

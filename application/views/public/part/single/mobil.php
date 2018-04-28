@@ -2,11 +2,11 @@
 <?php endforeach;?>
 <!-- title -->
 
-<div class="breadcumb" style="font-size: 20px;">
+<div class="breadcumb container" style="font-size: 20px;" style="text-align: center;">
     <span>Home > Mobil > <?php echo $hd->name_vh;?></span>
 </div>
 
-<div class="single-hotel-wrapper">
+<div class="single-hotel-wrapper container">
         <h3><?php echo $hd->name_vh;?></h3>
 
 	<div class="left">

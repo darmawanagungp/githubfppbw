@@ -194,7 +194,7 @@ text-align: center;
 #menu-head-wrapper
 {
     padding: 18px;
-    background: #2f2e52;
+    background: #386da5;
 }
 
 #menu-head-wrapper
@@ -234,7 +234,7 @@ text-align: center;
 #menu-head-wrapper
 .menu nav ul li a
 {
-    color: #fff;
+    color: yellow;
     font-family: karla;
     font-size: 18px;
     padding: 5px;
@@ -246,8 +246,8 @@ text-align: center;
 .menu nav ul li a:hover
 {
     transition: 0.2s;
-    border-bottom: 1px solid#fff;
-    color: #fff;
+    border-bottom: 1px solid #000;
+    color: #000;
 }
 
 /*************************************************************************
@@ -502,8 +502,8 @@ padding: 10px;
 .order-check-wrapper
 .left
 {
-    width: 40%; 
-    display: inline-block; 
+    width: 40%;
+    display: inline-block;
     vertical-align: top;
 }
 
@@ -584,10 +584,10 @@ input:not(:focus):valid ~ .placeholder{
 #footer
 {
     width: 100%;
-    background: #2f2e52;
+    background: #386da5;
     padding: 10px;
     font-family: work sans;
-    color: #fff;
+    color: yellow;
 }
 
 #footer
@@ -601,6 +601,6 @@ input:not(:focus):valid ~ .placeholder{
 .footer-border
 {
     margin-bottom: 13px;
-    border-bottom: 2px solid#424071;
+    border-bottom: 2px solid #111154;
     padding-top: 15px;
 }
