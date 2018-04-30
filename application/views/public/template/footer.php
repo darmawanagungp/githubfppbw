@@ -1,5 +1,21 @@
-<div id="footer">
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #2f2e52;
+   color: white;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="footer">
 	<div class="footer-wrapper">
 
 		<div class="pay-wrapper" style="text-align: center;">
@@ -25,11 +41,12 @@
 		</div>
 		<br>
 	</div>
-
 	<div class="footer-border"></div>
 
 	<div class="footer-wrapper">
 		<span style="text-align: center; display: block;">Copyright @ 2018. All right reserved</span>
 	</div>
-
 </div>
+
+</body>
+</html>
