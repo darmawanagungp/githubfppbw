@@ -12,14 +12,14 @@
 	<script src="//code.jquery.com/jquery.js"></script>
 
 	<!-- css -->
-	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/hpublic/css/style3.css"> -->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/hpublic/css/style3.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/hpublic/css/style.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Karla|Work+Sans" rel="stylesheet">
 
 	<!-- js -->
-	<!-- <script src="<?php echo base_url();?>assets/hpublic/js/jquery.min.js" type="text/javascript"></script>
-	<script src="<?php echo base_url();?>assets/hpublic/js/main.js" type="text/javascript"></script> -->
+	<script src="<?php echo base_url();?>assets/hpublic/js/jquery.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url();?>assets/hpublic/js/main.js" type="text/javascript"></script>
 	<script src="<?php echo base_url();?>assets/hadmin/js/jquery-3.2.1.js" type="text/javascript"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 	<!-- Latest compiled and minified CSS -->
@@ -49,6 +49,13 @@
 
 </head>
 <body>
+
+	<div id="loader-wrapper">
+	<h2>Loading...</h2>
+	<div id="loader"></div>
+	<div class="loader-section section-left"></div>
+	<div class="loader-section section-right"></div>
+	</div>
 
 <div id="jqContent">
 
