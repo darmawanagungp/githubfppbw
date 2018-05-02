@@ -9,15 +9,15 @@
 	<div class="menu">
 		<nav>
 		  <ul class="nav nav-tabs">
-				<li class="nav-item">
-				 <a class="nav-link active" href="<?php echo base_url();?>kendaraan">About Us</a>
-			 </li>
 				 <li class="nav-item">
 				 	<a class="nav-link active" href="<?php echo base_url();?>kendaraan">Kendaraan</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link active" href="<?php echo base_url();?>ordercheck">Cek Pemesanan</a>
 				</li>
+				<li class="nav-item">
+				 <a class="nav-link active" href="<?php echo base_url();?>kontak">Contact Us</a>
+			 </li>
 				<?php foreach($menu as $md):?>
 				<?php if(count($menu)>0):?>
 				<li class="nav-item">

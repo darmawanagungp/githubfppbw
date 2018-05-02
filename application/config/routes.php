@@ -83,6 +83,7 @@ $route['logout']		= 'clogin/logout';
 ///////////////////////////////////
 
 $route['kendaraan']					= 'public/vehicle';
+$route['kontak']					= 'ckontak';
 $route['kendaraan/(:any)']  		= 'public/vehicle/single_page/$1';
 $route['ordercheck']			 	= 'cpublic/p_order_check';
 $route['invoice/(:any)']		 	= 'public/invoice/index/$1';
