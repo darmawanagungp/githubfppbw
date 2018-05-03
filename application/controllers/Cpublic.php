@@ -31,7 +31,7 @@ class Cpublic extends MY_Controller {
 		$var['page_web']		= 'Beranda';
 
 		// view
-		$this->load->view('public/template/loader', $var);
+		// $this->load->view('public/template/loader', $var);
 		$this->load->view('public/template/head', $var);
 		$this->load->view('public/part/home/cover', $var);
 		$this->load->view('public/template/menu_head', $var);
@@ -51,7 +51,7 @@ class Cpublic extends MY_Controller {
 		$var['hotel']			= $this->photel->load_data();
 
 		// view
-		$this->load->view('public/template/loader', $var);
+		// $this->load->view('public/template/loader', $var);
 		$this->load->view('public/template/head', $var);
 		$this->load->view('public/template/menu_head', $var);
 		$this->load->view('public/template/content', $var);
@@ -69,7 +69,7 @@ class Cpublic extends MY_Controller {
 
 		// hootel data
 		$var['hotel_data']		= $this->photel->load_sc($slug);
-		$this->load->view('public/template/loader', $var);
+		// $this->load->view('public/template/loader', $var);
 		$this->load->view('public/template/head', $var);
 		$this->load->view('public/template/menu_head', $var);
 		$this->load->view('public/template/content', $var);
@@ -97,7 +97,7 @@ class Cpublic extends MY_Controller {
 		$var['long']			= $this->input->post('checkout');
 
 		// view
-		$this->load->view('public/template/loader', $var);
+		// $this->load->view('public/template/loader', $var);
 		$this->load->view('public/template/head', $var);
 		$this->load->view('public/template/menu_head', $var);
 		$this->load->view('public/template/content', $var);
@@ -206,7 +206,7 @@ class Cpublic extends MY_Controller {
 
 		$var['hotel_data']		= $this->photel->load_id($idhotel);
 		$var['inv_data']		= $this->photel->load_inv($unique_id);
-		$this->load->view('public/template/loader', $var);
+		// $this->load->view('public/template/loader', $var);
 		$this->load->view('public/template/head', $var);
 		$this->load->view('public/template/menu_head', $var);
 		$this->load->view('public/template/content', $var);
@@ -226,7 +226,7 @@ class Cpublic extends MY_Controller {
 		// var
 		$var['title_web']		= $this->web_title();
 		$var['page_web']		= 'Cek Pemesanan';
-		$this->load->view('public/template/loader', $var);
+		// $this->load->view('public/template/loader', $var);
 		$this->load->view('public/template/head', $var);
 		$this->load->view('public/template/menu_head', $var);
 		$this->load->view('public/template/content', $var);

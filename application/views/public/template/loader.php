@@ -18,8 +18,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Karla|Work+Sans" rel="stylesheet">
 
 	<!-- js -->
-	<script src="<?php echo base_url();?>assets/hpublic/js/jquery.min.js" type="text/javascript"></script>
-	<script src="<?php echo base_url();?>assets/hpublic/js/main.js" type="text/javascript"></script>
+
 	<script src="<?php echo base_url();?>assets/hadmin/js/jquery-3.2.1.js" type="text/javascript"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 	<!-- Latest compiled and minified CSS -->
@@ -58,6 +57,7 @@
 	</div>
 
 <div id="jqContent">
-
+	<script src="<?php echo base_url();?>assets/hpublic/js/jquery.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url();?>assets/hpublic/js/main.js" type="text/javascript"></script>
 </div>
 </div>
