@@ -1,10 +1,12 @@
+
 <?php foreach($mobil_data as $hd):?>
 <?php endforeach;?>
 <!-- title -->
 
-<div class="breadcumb container" style="font-size: 20px;" style="text-align: center;">
+<!-- <div class="breadcumb container" style="font-size: 20px;" style="text-align: center;">
     <span>Home > Mobil > <?php echo $hd->name_vh;?></span>
-</div>
+</div> -->
+
 
 <div class="single-hotel-wrapper container">
         <h3><?php echo $hd->name_vh;?></h3>

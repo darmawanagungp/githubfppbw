@@ -81,11 +81,13 @@ $route['logout']		= 'clogin/logout';
 ///////////////////////////////////
 // PUBLIC ROUTE
 ///////////////////////////////////
-
-$route['kendaraan']					= 'public/vehicle';
-$route['kontak']					= 'ckontak';
+$route['home']					        = 'cpublic/home';
+$route['home/(:any)']  		      = 'public/template/single_page/$1';
+$route['kendaraan']					    = 'public/vehicle';
 $route['kendaraan/(:any)']  		= 'public/vehicle/single_page/$1';
-$route['ordercheck']			 	= 'cpublic/p_order_check';
-$route['invoice/(:any)']		 	= 'public/invoice/index/$1';
+$route['ordercheck']			 	    = 'cpublic/p_order_check';
+$route['aboutUs']               = 'cpublic/aboutUs';
+$route['kontak']                = 'ckontak';
+$route['invoice/(:any)']  		 	= 'public/invoice/index/$1';
 $route['ordercheck/process'] 	 	= 'cpublic/proccess_order_check';
-$route['page/(:any)'] 				= 'public/page/index/$1';
+$route['page/(:any)'] 		  		= 'public/page/index/$1';

@@ -1,4 +1,5 @@
-<div class="order-check-wrapper" style="height: 67%;">
+
+<div class="order-check-wrapper" style="">
 <div class="container">
 
 	<div class="left container">
@@ -26,6 +27,10 @@
     	<br>
     	<br>
     	<button class="hbtn" type="submit">Cek Pemesanan</button>
+			<br>
+			<br>
+			<br>
+			<br>
 
     	</form>
 
@@ -48,4 +53,5 @@
 	</div>
 
 	</div>
+</div>
 </div>

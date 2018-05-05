@@ -33,14 +33,14 @@
       <div class="carousel-caption">
         <h2 class="animated fadeInDown">Rental Mobil Bapak Edy</h2>
         <p class="animated fadeInUp">Menyediakan berbagai pilihan mobil untuk anda sewa</p>
-        <p class="animated fadeInUp"><a class="btn btn-transparent btn-rounded btn-large" href="#">Learn More</a></p>
+        <p class="animated fadeInUp"><a class="btn btn-transparent btn-rounded btn-large" href="<?php echo base_url();?>aboutUs">Learn More</a></p>
       </div>
     </div>
     <div class="item"><img src="https://beautimour.com/wp-content/uploads/2018/04/pexels-photo-459654.jpeg" alt=""/>
       <div class="carousel-caption">
         <h2 class="animated bounceInDown">Mobil Baru</h2>
         <p class="animated bounceInUp">Menyediakan mobil terbaru dengan kualitas terbaik</p>
-        <p class="animated bounceInUp"><a class="btn btn-transparent btn-rounded btn-large" href="#">Book Now!</a></p>
+        <p class="animated bounceInUp"><a class="btn btn-transparent btn-rounded btn-large" href="<?php echo base_url();?>kendaraan">Book Now!</a></p>
       </div>
     </div>
     <div class="item"><img src="https://beautimour.com/wp-content/uploads/2018/04/pexels-photo-572056.jpeg" alt=""/>
