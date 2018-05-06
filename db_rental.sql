@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2018 at 05:04 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Generation Time: May 06, 2018 at 04:56 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -93,6 +93,49 @@ INSERT INTO `bb_category` (`id_cat`, `name_cat`, `desc_cat`, `slug_cat`, `date_c
 (1, 'MPV', 'Bus besar dapat menampung banyak penumpang', 'mpv', '2017-10-23', '14:05:51', '2017-10-23 14:05:51'),
 (2, 'SUV', 'Bus dengan berukuran sedang', 'suv', '2017-10-23', '14:06:25', '2017-10-23 14:06:25'),
 (5, 'rarar', 'wewqe', 'rarar', '2017-08-01', '19:58:36', '2017-08-01 19:58:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bb_chat`
+--
+
+CREATE TABLE `bb_chat` (
+  `id` int(11) NOT NULL,
+  `uid_sender` varchar(32) NOT NULL,
+  `uid_reciever` varchar(32) NOT NULL,
+  `chat_message` varchar(1000) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bb_chat`
+--
+
+INSERT INTO `bb_chat` (`id`, `uid_sender`, `uid_reciever`, `chat_message`, `timestamp`) VALUES
+(92, 'customer', 'admin', 'nama', '2018-05-06 08:10:31'),
+(93, 'customer', 'admin', 'saya', '2018-05-06 08:10:33'),
+(94, 'customer', 'admin', 'a', '2018-05-06 08:12:38'),
+(95, 'customer', 'admin', 'aa', '2018-05-06 08:12:39'),
+(96, 'customer', 'admin', 'a', '2018-05-06 08:12:39'),
+(97, 'customer', 'admin', 'a', '2018-05-06 08:12:39'),
+(98, 'customer', 'admin', '', '2018-05-06 08:12:40'),
+(99, 'customer', 'admin', 'aa', '2018-05-06 08:12:41'),
+(100, 'customer', 'admin', '', '2018-05-06 08:12:41'),
+(101, 'customer', 'admin', '', '2018-05-06 08:12:42'),
+(102, 'customer', 'admin', 'a', '2018-05-06 08:12:42'),
+(103, 'customer', 'admin', 'a', '2018-05-06 08:12:42'),
+(104, 'customer', 'admin', '', '2018-05-06 08:12:42'),
+(105, 'customer', 'admin', 'a', '2018-05-06 08:12:43'),
+(106, 'customer', 'admin', 'a', '2018-05-06 08:12:43'),
+(107, 'customer', 'admin', 'a', '2018-05-06 08:12:43'),
+(108, 'customer', 'admin', 'a', '2018-05-06 08:12:43'),
+(109, 'customer', 'admin', 'aa', '2018-05-06 08:12:43'),
+(110, 'customer', 'admin', 'a', '2018-05-06 08:12:44'),
+(111, 'customer', 'admin', '', '2018-05-06 08:12:44'),
+(112, 'customer', 'admin', '', '2018-05-06 08:12:44'),
+(113, 'customer', 'admin', 'a', '2018-05-06 08:12:45'),
+(114, 'customer', 'admin', 'kamu', '2018-05-06 08:17:19');
 
 -- --------------------------------------------------------
 
@@ -377,6 +420,12 @@ ALTER TABLE `bb_category`
   ADD PRIMARY KEY (`id_cat`);
 
 --
+-- Indexes for table `bb_chat`
+--
+ALTER TABLE `bb_chat`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `bb_invoice`
 --
 ALTER TABLE `bb_invoice`
@@ -445,6 +494,12 @@ ALTER TABLE `bb_bank`
 --
 ALTER TABLE `bb_category`
   MODIFY `id_cat` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `bb_chat`
+--
+ALTER TABLE `bb_chat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
 -- AUTO_INCREMENT for table `bb_invoice`

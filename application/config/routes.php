@@ -81,6 +81,7 @@ $route['logout']		= 'clogin/logout';
 ///////////////////////////////////
 // PUBLIC ROUTE
 ///////////////////////////////////
+$route['sendchat']              = 'cpublic/send_chat';
 $route['home']					        = 'cpublic/home';
 $route['home/(:any)']  		      = 'public/template/single_page/$1';
 $route['kendaraan']					    = 'public/vehicle';

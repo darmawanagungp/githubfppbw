@@ -7,6 +7,9 @@ class Cpublic extends MY_Controller {
 	{
 		parent::__construct();
 
+		//load library
+		$this->load->library('session');
+
 		// load helper
 		$this->load->helper('date');
 		$this->load->helper('rpCurrency_helper');
@@ -18,6 +21,19 @@ class Cpublic extends MY_Controller {
 		$this->load->model('public/photel');
 		$this->load->model('public/pinvoice');
 		$this->load->model('admin/msetting');
+
+		if(!isset($_SESSION['uid'])){
+				$_SESSION['uid'] = uniqid();
+		}
+		$this->load->model('chat_model');
+	}
+
+	public function send_chat(){
+		$chat_message = $this->chat_model->input->post('chat_message');
+		$uid_sender = $_SESSION['uid'];
+		$uid_receiver = 'admin';
+		$this->chat_model->insert_chat($uid_sender, $uid_receiver, $chat_message);
+		$this->index();
 	}
 
 	public function index()
@@ -40,7 +56,6 @@ class Cpublic extends MY_Controller {
 		$this->load->view('public/part/home/endcover');
 
 		redirect('home');
-
 	}
 
 	public function home()
@@ -61,7 +76,8 @@ class Cpublic extends MY_Controller {
 		$this->load->view('public/template/carousel');
 		$this->load->view('public/part/home/slogan', $var);
 		$this->load->view('public/part/home/endcover');
-
+		$data['chats'] = $this->chat_model->select_chat($_SESSION['uid']);
+		$this->load->view('public/template/chat', $data);
 	}
 
 	public function p_hotel()
