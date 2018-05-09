@@ -49,11 +49,11 @@ class Cpublic extends MY_Controller {
 		// view
 		// $this->load->view('public/template/loader', $var);
 		$this->load->view('public/template/head', $var);
-		$this->load->view('public/part/home/cover', $var);
-		$this->load->view('public/template/menu_head', $var);
-		$this->load->view('public/template/carousel');
-		$this->load->view('public/part/home/slogan', $var);
-		$this->load->view('public/part/home/endcover');
+		// $this->load->view('public/part/home/cover', $var);
+		// $this->load->view('public/template/menu_head', $var);
+		// $this->load->view('public/template/carousel');
+		// $this->load->view('public/part/home/slogan', $var);
+		// $this->load->view('public/part/home/endcover');
 
 		redirect('home');
 	}
@@ -70,12 +70,12 @@ class Cpublic extends MY_Controller {
 
 		// view
 		// $this->load->view('public/template/loader', $var);
-		$this->load->view('public/template/head', $var);
+		// $this->load->view('public/template/head', $var);
 		$this->load->view('public/part/home/cover', $var);
 		$this->load->view('public/template/menu_head', $var);
-		$this->load->view('public/template/carousel');
-		$this->load->view('public/part/home/slogan', $var);
-		$this->load->view('public/part/home/endcover');
+		// $this->load->view('public/template/carousel');
+		// $this->load->view('public/part/home/slogan', $var);
+		// $this->load->view('public/part/home/endcover');
 		$data['chats'] = $this->chat_model->select_chat($_SESSION['uid']);
 		$this->load->view('public/template/chat', $data);
 	}
@@ -265,9 +265,9 @@ class Cpublic extends MY_Controller {
 		$var['title_web']		= $this->web_title();
 		$var['page_web']		= 'Cek Pemesanan';
 		// $this->load->view('public/template/loader', $var);
-		$this->load->view('public/template/head', $var);
-		$this->load->view('public/template/menu_head', $var);
-		$this->load->view('public/template/content', $var);
+		// $this->load->view('public/template/head', $var);
+		// $this->load->view('public/template/menu_head', $var);
+		// $this->load->view('public/template/content', $var);
 		$this->load->view('public/part/single/order_check', $var);
 		$this->load->view('public/template/end_content');
 		$this->load->view('public/template/footer', $var);
@@ -347,14 +347,8 @@ class Cpublic extends MY_Controller {
 		$var['bank_data']  		= $this->msetting->load_data_bank();
 		// var
 		$var['title_web']		= $this->web_title();
-		$var['page_web']		= 'Cek Pemesanan';
-		// $this->load->view('public/template/loader', $var);
-		$this->load->view('public/template/head', $var);
-		$this->load->view('public/template/menu_head', $var);
-		// $this->load->view('public/template/content', $var);
+		$var['page_web']		= 'Tentang Kami';
 		$this->load->view('public/part/single/about_us', $var);
-		// $this->load->view('public/template/end_content');
-		// $this->load->view('public/template/end_content');
 		$this->load->view('public/template/footer', $var);
 	}
 

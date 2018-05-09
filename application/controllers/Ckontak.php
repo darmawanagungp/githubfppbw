@@ -26,22 +26,16 @@ class Ckontak extends MY_Controller{
     // data
 		$var['menu'] 			= $this->msetting->load_menu();
 
+		// setting
+		$var['bank_data']  		= $this->msetting->load_data_bank();
+
 		// var
 		$var['title_web']		= $this->web_title();
-		$var['page_web']		= 'Beranda';
+		$var['page_web']		= 'Kontak Kami';
 
 		// view
-		// $this->load->view('public/template/loader', $var);
-		$this->load->view('public/template/head', $var);
-		$this->load->view('public/part/home/cover', $var);
-		$this->load->view('public/template/menu_head', $var);
-		// $this->load->view('public/part/home/slogan', $var);
-		// $this->load->view('public/template/content', $var);
-		// $this->load->view('public/template/footer', $var);
-		// $this->load->view('public/part/home/endcover');
-
-    // redirect('kontak');
 		$this->load->view('public/part/single/v_kontak', $var);
+		$this->load->view('public/template/footer', $var);
 	}
 
 	function kirim_pesan(){

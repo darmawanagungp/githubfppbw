@@ -29,11 +29,61 @@
 	</head>
 	<body>
 
+
+	<div id="fh5co-page">
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="header-inner">
+				<h1><a href="<?php echo base_url().''?>">Rental Edi<span></span></a></h1>
+				<nav role="navigation">
+					<ul>
+						<li><a href="<?php echo base_url();?>home">Home</a></li>
+		        <li><a href="<?php echo base_url();?>kendaraan">Kendaraan</a></li>
+		        <li><a href="<?php echo base_url();?>ordercheck">Cek Pemesanan</a></li>
+						<li><a href="<?php echo base_url();?>aboutUs">About Us</a></li>
+						<li><a href="<?php echo base_url();?>kontak">Contact Us</a></li>
+            <li class="cta"><a href="<?php echo base_url().'kendaraan'?>">Get started</a></li>
+
+		        <?php foreach($menu as $md):?>
+    				<?php if(count($menu)>0):?>
+    				<li>
+    					<a href="<?php echo base_url().'/page/'.url_title($md->name_page, '-', TRUE);?>">
+    						<?php echo $md->name_page;?>
+    					</a>
+    				</li>
+    				<?php else:?>
+    				<?php endif;?>
+    				<?php endforeach;?>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+
+	<aside id="fh5co-hero" clsas="js-fullheight">
+		<div class="flexslider js-fullheight">
+			<ul class="slides">
+		   	<li style="background-image: url(<?php echo base_url().'theme/images/slide_3.jpg'?>);">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner">
+		   					<h2>Get in touch. Don't be shy.</h2>
+		   					<p class="fh5co-lead">Kami siap melayani Anda 24/7</p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		  	</ul>
+	  	</div>
+	</aside>
+
 	<div class="fh5co-contact animate-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
-					<h3 style="color:#ffff;">Contact Info.</h3>
+					<h3>Contact Info.</h3>
 					<ul class="contact-info">
 						<li style="color:#f5b120;"><i class="icon-map"></i>Rental XXXX - Keputih Sukolilo</li>
 						<li style="color:#f5b120;"><i class="icon-phone"></i>+ 1235 2355 98</li>
@@ -48,17 +98,17 @@
 					<form method="post" action="<?php echo base_url().'ckontak/kirim_pesan'?>">
 						<div class="col-md-6">
 							<div class="form-group">
-								<input class="form-control" style="color:#f5b120;" name="nama" placeholder="Nama" type="text" required>
+								<input class="form-control" name="nama" placeholder="Nama" type="text" required>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<input class="form-control" style="color:#f5b120;" name="email" placeholder="Email" type="email" required>
+								<input class="form-control" name="email" placeholder="Email" type="email" required>
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
-								<textarea name="pesan" class="form-control" style="color:#f5b120;" id="" cols="30" rows="7" placeholder="Message" required></textarea>
+								<textarea name="pesan" class="form-control" id="" cols="30" rows="7" placeholder="Message" required></textarea>
 							</div>
 						</div>
 						<div class="col-md-12">
@@ -72,9 +122,10 @@
 			</div>
 		</div>
 	</div>
-<!--
+
 	<div id="map" class="animate-box" data-animate-effect="fadeIn"></div>
-	</div> -->
+
+	</div>
 
 
 	<!-- jQuery -->
