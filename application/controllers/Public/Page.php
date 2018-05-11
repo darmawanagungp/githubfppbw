@@ -1,23 +1,5 @@
 <?php
 
-/**
- * @package			Codeigniter
- * @author      	Yulius
- * @license 		http://codeigniter.com/user_guide/license.html
- * @since 			Version 3.1.4
-*/
-
-
-// ------------------------------------------------------------------------
-
-/**
- *	Application Controller Class Page extends MY_Controller
- *
- *	Class ini untuk halaman tagihan
- *
- *	@subpackage			model, view, helper, date
-*/
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Page extends MY_Controller {
@@ -27,15 +9,6 @@ class Page extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
-
-		// mengambil data model, library, helper
-
-
-		/**
-		 *
-		 * Model dan Helper di define dengan array
-		 *
-		*/
 
 		$array_helper = array(
 						'rpCurrency_helper',

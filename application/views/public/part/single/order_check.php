@@ -34,10 +34,9 @@
 	<header id="fh5co-header" role="banner">
 		<div class="container">
 			<div class="header-inner">
-				<h1><a href="<?php echo base_url().''?>">Rental Edi<span></span></a></h1>
+				<h1><a href="<?php echo base_url().''?>">Rental Mobil Edi<span></span></a></h1>
 				<nav role="navigation">
 					<ul>
-						<li><a href="<?php echo base_url();?>home">Home</a></li>
 		        <li><a href="<?php echo base_url();?>kendaraan">Kendaraan</a></li>
 		        <li><a href="<?php echo base_url();?>ordercheck">Cek Pemesanan</a></li>
 						<li><a href="<?php echo base_url();?>aboutUs">About Us</a></li>
@@ -120,7 +119,7 @@
 	</div>
 
 
-
+	<?php $this->load->view('public/template/footer');?>
 	</div>
 
 

@@ -1,23 +1,4 @@
 <?php
-
-/**
- * @package			Codeigniter
- * @author      	Yulius
- * @license 		http://codeigniter.com/user_guide/license.html
- * @since 			Version 3.1.4
-*/
-
-
-// ------------------------------------------------------------------------
-
-/**
- *	Application Controller Class Vehicle extends MY_Controller
- *
- *	Class ini untuk halaman Kendaraan
- *
- *	@subpackage			model, view, helper, date
-*/
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Vehicle extends MY_Controller {
@@ -27,15 +8,6 @@ class Vehicle extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
-
-		// mengambil data model, library, helper
-
-
-		/**
-		 *
-		 * Model dan Helper di define dengan array
-		 *
-		*/
 
 		$array_helper = array(
 						'rpCurrency_helper',
@@ -47,6 +19,7 @@ class Vehicle extends MY_Controller {
 						'admin/msetting',
 						'public/pvehicle',
 			);
+
 
 		// MODEL
 		$this->load->model($array_model);
@@ -72,10 +45,8 @@ class Vehicle extends MY_Controller {
 		$var['i'] = $this->input->post('i');
 		$var['j'] = $this->input->post('j');
 		// template
-		$this->public_template($var);
+		// $this->public_template($var);
 		$this->load->view('public/part/mobil/index', $var);
-		$this->load->view('public/template/end_content');
-		$this->load->view('public/template/footer');
 
 	}
 
@@ -94,9 +65,9 @@ class Vehicle extends MY_Controller {
 		$var['bank_data']  		= $this->msetting->load_data_bank();
 
 		// template
-		$this->public_template($var);
+		// $this->public_template($var);
 		$this->load->view('public/part/single/mobil', $var);
-		$this->load->view('public/template/footer', $var);
+		// $this->load->view('public/template/footer', $var);
 	}
 
 // end model

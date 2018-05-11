@@ -1,23 +1,5 @@
 <?php
 
-/**
- * @package			Codeigniter
- * @author      	Yulius
- * @license 		http://codeigniter.com/user_guide/license.html
- * @since 			Version 3.1.4
-*/
-
-
-// ------------------------------------------------------------------------
-
-/**
- *	Application Controller Class Invoice extends MY_Controller
- *
- *	Class ini untuk halaman tagihan
- *
- *	@subpackage			model, view, helper, date
-*/
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Invoice extends MY_Controller {
@@ -27,15 +9,6 @@ class Invoice extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
-
-		// mengambil data model, library, helper
-
-
-		/**
-		 *
-		 * Model dan Helper di define dengan array
-		 *
-		*/
 
 		$array_helper = array(
 						'rpCurrency_helper',
@@ -95,10 +68,10 @@ class Invoice extends MY_Controller {
 		$var['limit'] 		   = $diff->h;
 
 		// view
-		$this->public_template($var);
+		// $this->public_template($var);
 		$this->load->view('public/part/single/invoice', $var);
-		$this->load->view('public/template/end_content');
-		$this->load->view('public/template/footer', $var);
+		// $this->load->view('public/template/end_content');
+		// $this->load->view('public/template/footer', $var);
 	}
 
 	// timer tagihan
@@ -125,7 +98,7 @@ class Invoice extends MY_Controller {
 		{
 			echo 60-$diff->i . ' Menit ';
 			echo 60-$diff->s . ' Detik ';
-			echo "<br><br><div class='btn btn-success conf'>Konfirmasi Pemabayaran</div><br><br>";
+			echo "<br><br><div class='btn btn-success conf'>Konfirmasi Pembayaran</div><br><br>";
 		}
 	}
 
@@ -142,7 +115,7 @@ class Invoice extends MY_Controller {
 	{
 		$this->pinvoice->confirm();
 
-		echo "Terimakasih telah konfirmasi pembayaran, konfirmasi akan kami process.";
+		echo "Terimakasih telah konfirmasi pembayaran, konfirmasi akan kami proses.";
 	}
 
 

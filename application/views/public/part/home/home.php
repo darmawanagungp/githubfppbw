@@ -1,14 +1,11 @@
 <div class="fac-wrapper">
-
 	<h2>Berbagai Macam Fasilitas Hotel Kami</h2>
 	<br>
-
 	<?php foreach($fac_data as $fd):?>
 		<div class="content">
 			<img src="<?php echo base_url().'assets/hpublic/img_icon/'.$fd->icon;?>">
 			<span><?php echo $fd->title;?></span>
-		</div>
-	<?php endforeach;?>
+		<?php endforeach;?>
 
 </div>
 <br>

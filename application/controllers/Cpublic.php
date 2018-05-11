@@ -40,7 +40,7 @@ class Cpublic extends MY_Controller {
 	{
 
 		// data
-		$var['menu'] 			= $this->msetting->load_menu();
+		// $var['menu'] 			= $this->msetting->load_menu();
 
 		// var
 		$var['title_web']		= $this->web_title();
@@ -48,14 +48,17 @@ class Cpublic extends MY_Controller {
 
 		// view
 		// $this->load->view('public/template/loader', $var);
-		$this->load->view('public/template/head', $var);
+		// $this->load->view('public/template/head', $var);
 		// $this->load->view('public/part/home/cover', $var);
 		// $this->load->view('public/template/menu_head', $var);
 		// $this->load->view('public/template/carousel');
 		// $this->load->view('public/part/home/slogan', $var);
 		// $this->load->view('public/part/home/endcover');
+		// $this->load->view('public/part/single/about_us', $var);
+		// $this->load->view('public/part/template/carousel', $var);
 
 		redirect('home');
+
 	}
 
 	public function home()
@@ -72,12 +75,14 @@ class Cpublic extends MY_Controller {
 		// $this->load->view('public/template/loader', $var);
 		// $this->load->view('public/template/head', $var);
 		$this->load->view('public/part/home/cover', $var);
-		$this->load->view('public/template/menu_head', $var);
+		// $this->load->view('public/template/menu_head', $var);
 		// $this->load->view('public/template/carousel');
 		// $this->load->view('public/part/home/slogan', $var);
 		// $this->load->view('public/part/home/endcover');
+
 		$data['chats'] = $this->chat_model->select_chat($_SESSION['uid']);
 		$this->load->view('public/template/chat', $data);
+		// $this->load->view('public/part/home/home', $data);
 	}
 
 	public function p_hotel()
@@ -90,12 +95,12 @@ class Cpublic extends MY_Controller {
 
 		// view
 		// $this->load->view('public/template/loader', $var);
-		$this->load->view('public/template/head', $var);
-		$this->load->view('public/template/menu_head', $var);
-		$this->load->view('public/template/content', $var);
+		// $this->load->view('public/template/head', $var);
+		// $this->load->view('public/template/menu_head', $var);
+		// $this->load->view('public/template/content', $var);
 		$this->load->view('public/part/hotel/index', $var);
-		$this->load->view('public/template/end_content');
-		$this->load->view('public/template/footer', $var);
+		// $this->load->view('public/template/end_content');
+		// $this->load->view('public/template/footer', $var);
 
 	}
 
@@ -108,11 +113,11 @@ class Cpublic extends MY_Controller {
 		// hootel data
 		$var['hotel_data']		= $this->photel->load_sc($slug);
 		// $this->load->view('public/template/loader', $var);
-		$this->load->view('public/template/head', $var);
-		$this->load->view('public/template/menu_head', $var);
-		$this->load->view('public/template/content', $var);
+		// $this->load->view('public/template/head', $var);
+		// $this->load->view('public/template/menu_head', $var);
+		// $this->load->view('public/template/content', $var);
 		$this->load->view('public/part/single/hotel', $var);
-		$this->load->view('public/template/footer', $var);
+		// $this->load->view('public/template/footer', $var);
 	}
 
 	public function p_form()
@@ -136,9 +141,9 @@ class Cpublic extends MY_Controller {
 
 		// view
 		// $this->load->view('public/template/loader', $var);
-		$this->load->view('public/template/head', $var);
-		$this->load->view('public/template/menu_head', $var);
-		$this->load->view('public/template/content', $var);
+		// $this->load->view('public/template/head', $var);
+		// $this->load->view('public/template/menu_head', $var);
+		// $this->load->view('public/template/content', $var);
 		$this->load->view('public/part/single/reserve_form', $var);
 	}
 
@@ -245,12 +250,12 @@ class Cpublic extends MY_Controller {
 		$var['hotel_data']		= $this->photel->load_id($idhotel);
 		$var['inv_data']		= $this->photel->load_inv($unique_id);
 		// $this->load->view('public/template/loader', $var);
-		$this->load->view('public/template/head', $var);
-		$this->load->view('public/template/menu_head', $var);
-		$this->load->view('public/template/content', $var);
+		// $this->load->view('public/template/head', $var);
+		// $this->load->view('public/template/menu_head', $var);
+		// $this->load->view('public/template/content', $var);
 		$this->load->view('public/part/single/invoice', $var);
-		$this->load->view('public/template/end_content');
-		$this->load->view('public/template/footer', $var);
+		// $this->load->view('public/template/end_content');
+		// $this->load->view('public/template/footer', $var);
 	}
 
 	// FUNCTION ORDER CHECK
@@ -264,13 +269,9 @@ class Cpublic extends MY_Controller {
 		// var
 		$var['title_web']		= $this->web_title();
 		$var['page_web']		= 'Cek Pemesanan';
-		// $this->load->view('public/template/loader', $var);
-		// $this->load->view('public/template/head', $var);
-		// $this->load->view('public/template/menu_head', $var);
-		// $this->load->view('public/template/content', $var);
 		$this->load->view('public/part/single/order_check', $var);
-		$this->load->view('public/template/end_content');
-		$this->load->view('public/template/footer', $var);
+		// $this->load->view('public/template/end_content');
+		// $this->load->view('public/template/footer', $var);
 
 	}
 
@@ -349,7 +350,7 @@ class Cpublic extends MY_Controller {
 		$var['title_web']		= $this->web_title();
 		$var['page_web']		= 'Tentang Kami';
 		$this->load->view('public/part/single/about_us', $var);
-		$this->load->view('public/template/footer', $var);
+		// $this->load->view('public/template/footer', $var);
 	}
 
 

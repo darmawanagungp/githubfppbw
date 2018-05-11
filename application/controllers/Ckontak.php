@@ -35,7 +35,7 @@ class Ckontak extends MY_Controller{
 
 		// view
 		$this->load->view('public/part/single/v_kontak', $var);
-		$this->load->view('public/template/footer', $var);
+		// $this->load->view('public/template/footer', $var);
 	}
 
 	function kirim_pesan(){
