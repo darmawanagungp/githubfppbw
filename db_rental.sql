@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2018 at 04:56 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Generation Time: May 14, 2018 at 07:56 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -135,7 +135,10 @@ INSERT INTO `bb_chat` (`id`, `uid_sender`, `uid_reciever`, `chat_message`, `time
 (111, 'customer', 'admin', '', '2018-05-06 08:12:44'),
 (112, 'customer', 'admin', '', '2018-05-06 08:12:44'),
 (113, 'customer', 'admin', 'a', '2018-05-06 08:12:45'),
-(114, 'customer', 'admin', 'kamu', '2018-05-06 08:17:19');
+(114, 'customer', 'admin', 'kamu', '2018-05-06 08:17:19'),
+(115, '5aef165725e18', 'admin', 'halo', '2018-05-06 15:01:10'),
+(116, '5aef165725e18', 'admin', 'Agatha581998', '2018-05-10 13:53:35'),
+(117, '5aef165725e18', 'admin', 'tes', '2018-05-14 15:39:00');
 
 -- --------------------------------------------------------
 
@@ -358,6 +361,27 @@ INSERT INTO `bb_setting` (`id_ws`, `name_ws`, `slogan_ws`, `telp_ws`, `email_ws`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `bb_staff`
+--
+
+CREATE TABLE `bb_staff` (
+  `id_staff` int(11) NOT NULL,
+  `nama_staff` varchar(50) NOT NULL,
+  `gaji_staff` int(8) NOT NULL,
+  `jabatan_staff` varchar(50) NOT NULL,
+  `dob_staff` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bb_staff`
+--
+
+INSERT INTO `bb_staff` (`id_staff`, `nama_staff`, `gaji_staff`, `jabatan_staff`, `dob_staff`) VALUES
+(12, 'asdf', 234345, 'asdfg', '2018-05-04');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `bb_vehicle`
 --
 
@@ -387,7 +411,6 @@ INSERT INTO `bb_vehicle` (`id_vh`, `name_vh`, `desc_vh`, `slug_vh`, `price_vh`, 
 (16, 'oke', 'Deskripsi Kendaraan . . .iohgvcx', 'oke', '56789', 'tg1524922058.png', '2018-04-28', '15:27:38', '2018-04-28 15:27:38'),
 (17, 'iufyouiv', 'ihvuovyuyDeskripsi Kendaraan . . .', 'iufyouiv', '54678976', 'tg1524924478.png', '2018-04-28', '16:07:58', '2018-04-28 16:07:58'),
 (18, 'ytuxyckyugyfi', '<p>65789&nbsp;&nbsp;&nbsp;&nbsp;Deskripsi Kendaraan . . .</p>', 'ytuxyckyugyfi', '456789', 'tg1524924500.png', '2018-04-28', '16:08:20', '2018-04-28 16:08:20'),
-(19, 'iufpuyvpuyvpuv', '<p>ivuipv&nbsp;&nbsp;&nbsp;&nbsp;Deskripsi Kendaraan . . .&nbsp;&nbsp;&nbsp;&nbsp;</p>', 'iufpuyvpuyvpuv', '5678', 'tg1524924660.png', '2018-04-28', '16:11:00', '2018-04-28 16:11:00'),
 (20, 'zxer', 'Deskripsi Kendaraan . . .kop0oiu', 'zxer', '234567', 'tg1524924863.png', '2018-04-28', '16:14:23', '2018-04-28 16:14:23'),
 (21, 'assqw', 'Deskripsi Kendaraan . . .qwwe', 'assqw', '87654', 'tg1524924895.png', '2018-04-28', '16:14:55', '2018-04-28 16:14:55'),
 (22, 'dshvhdgs', 'Deskripsi Kendaraan . . .asjgja', 'dshvhdgs', '665645', 'tg1524924945.png', '2018-04-28', '16:15:45', '2018-04-28 16:15:45'),
@@ -396,6 +419,29 @@ INSERT INTO `bb_vehicle` (`id_vh`, `name_vh`, `desc_vh`, `slug_vh`, `price_vh`, 
 (25, 'sdfghjk', 'Deskripsi Kendaraan . . .cvbnm', 'sdfghjk', '123', 'tg1524925018.png', '2018-04-28', '16:16:58', '2018-04-28 16:16:58'),
 (27, 'sdfghjkl', 'Deskripsi Kendaraan . . .qqazx', 'sdfghjkl', '1234567', 'tg1524925110.png', '2018-04-28', '16:18:30', '2018-04-28 16:18:30'),
 (28, 'asdfg', 'Deskripsi Kendaraan . . .hgfdxz', 'asdfg', '87654', 'tg1524925131.png', '2018-04-28', '16:18:51', '2018-04-28 16:18:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_inbox`
+--
+
+CREATE TABLE `tbl_inbox` (
+  `inbox_id` int(11) NOT NULL,
+  `inbox_nama` varchar(40) DEFAULT NULL,
+  `inbox_email` varchar(60) DEFAULT NULL,
+  `inbox_kontak` varchar(20) DEFAULT NULL,
+  `inbox_pesan` text,
+  `inbox_tanggal` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `inbox_status` int(11) DEFAULT '1' COMMENT '1=Belum dilihat, 0=Telah dilihat'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_inbox`
+--
+
+INSERT INTO `tbl_inbox` (`inbox_id`, `inbox_nama`, `inbox_email`, `inbox_kontak`, `inbox_pesan`, `inbox_tanggal`, `inbox_status`) VALUES
+(1, 'Darmawan Priambudi', 'darmawannap@gmail.com', NULL, 'Halo Halo', '2018-03-22 15:34:17', 0);
 
 --
 -- Indexes for dumped tables
@@ -468,6 +514,12 @@ ALTER TABLE `bb_setting`
   ADD PRIMARY KEY (`id_ws`);
 
 --
+-- Indexes for table `bb_staff`
+--
+ALTER TABLE `bb_staff`
+  ADD PRIMARY KEY (`id_staff`);
+
+--
 -- Indexes for table `bb_vehicle`
 --
 ALTER TABLE `bb_vehicle`
@@ -499,7 +551,7 @@ ALTER TABLE `bb_category`
 -- AUTO_INCREMENT for table `bb_chat`
 --
 ALTER TABLE `bb_chat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 
 --
 -- AUTO_INCREMENT for table `bb_invoice`
@@ -542,6 +594,12 @@ ALTER TABLE `bb_seat`
 --
 ALTER TABLE `bb_setting`
   MODIFY `id_ws` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `bb_staff`
+--
+ALTER TABLE `bb_staff`
+  MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `bb_vehicle`
