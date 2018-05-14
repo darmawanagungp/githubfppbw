@@ -23,6 +23,11 @@
 				</a>
 			</li>
 			<li>
+				<a href="<?php echo base_url();?>admin/staff">
+					<span class="glyphicon glyphicon-book"></span> Pegawai
+				</a>
+			</li>
+			<li>
 				<a href="<?php echo base_url();?>admin/tagihan">
 					<span class="glyphicon glyphicon-barcode"></span> Tagihan
 				</a>

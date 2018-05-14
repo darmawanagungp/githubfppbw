@@ -65,6 +65,7 @@ $route['admin']				= 'cadmin';
 $route['admin/beranda']		= 'admin/dashboard';
 $route['admin/halaman']		= 'admin/page';
 $route['admin/mobil']			= 'admin/mobil';
+$route['admin/staff']			= 'admin/staff';
 $route['admin/seat']		= 'admin/seat';
 $route['admin/tipe']		= 'admin/type';
 $route['admin/tagihan'] 	= 'admin/invoice';
