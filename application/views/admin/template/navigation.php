@@ -33,6 +33,11 @@
 				</a>
 			</li>
 			<li>
+				<a href="<?php echo base_url();?>admin/chat">
+					<span class="glyphicon glyphicon-barcode"></span> Chat
+				</a>
+			</li>
+			<li>
 				<a href="<?php echo base_url();?>admin/setting">
 					<span class="	glyphicon glyphicon-cog"></span> Setting
 				</a>
