@@ -42,7 +42,7 @@ CREATE TABLE `bb_admin` (
 --
 
 INSERT INTO `bb_admin` (`id_admin`, `username_admin`, `password_admin`, `date_admin`, `time_admin`, `date_time_admin`) VALUES
-(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '2018-04-04', '01:00:00', '2018-04-04 01:00:00');
+(1, 'admin', 'MTIzNDU2', '2018-04-04', '01:00:00', '2018-04-04 01:00:00');
 
 -- --------------------------------------------------------
 
