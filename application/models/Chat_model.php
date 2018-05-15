@@ -21,4 +21,8 @@ class Chat_model extends CI_Model {
     $query = $this->db->get('bb_chat');
     return $query;
   }
+  public function rowCount(){
+      $query = $this->db->get('bb_chat');
+      return count($query->result());
+  }
 }
