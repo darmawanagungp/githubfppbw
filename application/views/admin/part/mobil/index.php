@@ -42,8 +42,8 @@ $(document).on('click', '#delete', function(){
   var id = $(this).attr('idcontent');
 
   $.get(bu+'admin/mobil/mobil_delete/'+id, function(data){
-    alert(data);
-  });
-
-});
+		//alert(data);
+		window.location.replace("http://localhost/pbwfp/githubfppbw/admin/mobil");
+	});
+	});
 </script>
