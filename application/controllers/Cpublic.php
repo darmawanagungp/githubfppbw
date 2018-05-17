@@ -22,9 +22,9 @@ class Cpublic extends MY_Controller {
 		$this->load->model('public/pinvoice');
 		$this->load->model('admin/msetting');
 
-		//if(!isset($_SESSION['uid'])){
-				$_SESSION['uid'] = uniqid();
-		//}
+		if(!isset($_SESSION['uid'])){
+			$_SESSION['uid'] = uniqid();
+		}
 		$this->load->model('chat_model');
 	}
 
